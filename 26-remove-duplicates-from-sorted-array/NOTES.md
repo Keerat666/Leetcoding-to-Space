@@ -1,1 +1,3 @@
-​
+ - Used a Set to remove all duplicates and then overwrote the exisiting elements of an array
+ - Set does not maintain the order of the elements 
+ - Iterating over a set has a different snippet
