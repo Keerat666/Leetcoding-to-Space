@@ -5,18 +5,21 @@ class Solution {
         if(s.length() != t.length())
             return false;
         
-        char[] chars = s.toCharArray();
-        Arrays.sort(chars);
-        String sorted_s = new String(chars);
-       
-        char[] chars2 = t.toCharArray();
-        Arrays.sort(chars2);
-        String sorted_t = new String(chars2);
+        int arr[]=new int[26];
         
-        if(sorted_s.equals(sorted_t))
-            return true;
-        else
-            return false;
+        for(int i=0;i<s.length();i++)
+        {
+            arr[s.charAt(i)-'a']++;
+            arr[t.charAt(i)- 'a']--;
+        }
+        
+        for(int count : arr)
+        {
+            if(count!=0)
+                return false;
+        }
+        
+        return true;
         
         
     }
