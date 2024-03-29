@@ -11,7 +11,7 @@
 class Solution {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         
-       ListNode dummy = new ListNode(0);  // Dummy node to handle the head
+       ListNode dummy = new ListNode(0);  
        ListNode current = dummy;          // Pointer for the merged list
 
         while (list1 != null && list2 != null) {
@@ -28,7 +28,7 @@ class Solution {
         // Append any remaining nodes from either list
         current.next = list1 != null ? list1 : list2;
 
-        return dummy.next;  // Skip the dummy node
+        return dummy.next;  
         
     }
 }
